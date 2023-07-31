@@ -1,0 +1,81 @@
+@import "./fonts";
+@import "./mixinScroll";
+@import "./normalizeReset";
+@import "./themes/dark";
+@import "./variables/global";
+
+* {
+  @include scroll-8;
+}
+
+html {
+  @include scroll-8;
+
+  background: #121212;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: Inter, Manrope, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: clash-display;
+  font-weight: 600;
+  src:
+    local("clash-display"),
+    url("./fonts/ClashDisplay-Variable.ttf") format("woff");
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+  print-color-adjust: exact;
+}
+
+.snackbars-container {
+  position: relative;
+  width: 100%;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.orange {
+  background: var(--o-400);
+  fill: var(--secondary-dark-blue);
+}
+
+.blue {
+  background: var(--b-400);
+  fill: var(--secondary-blue);
+}
+
+.green {
+  background: var(--main-green);
+  fill: var(--success-500);
+}
+
+.red {
+  background: var(--error-500);
+  fill: var(--error-700);
+}
+
+.white-blue {
+  background-color: var(--info-300);
+}
+
+.blue-text {
+  color: var(--b-400) !important;
+}
